@@ -29,7 +29,7 @@
  ##### Please enter i/p tweet :  
  ##### {goes on...}
  
- Inorder to exit from the application, press [cntrl + c]
+ Inorder to exit from the application, press [ctrl + c]
  
        
  ### Improvements In future:        
