@@ -13,23 +13,23 @@
  * On execution above command user will be seeing following text in the console.
      * Please enter i/p tweet: 
      * {user-input-tweet} for ex: this is my first tweet #tweet [enter]
-     * Output will be as below:  
+ * Output will be as below:  
      
- ##### Below are Top 10 Trending Tweets  
- ##### ============================ 
- ##### #tweet  
- ##### ============================  
- ##### Please enter i/p tweet :  
- ##### this is my second tweet #newtweet
- ##### Below are Top 10 Trending Tweets  
- ##### ============================ 
- ##### #tweet  
- ##### #newtweet
- ##### ============================  
- ##### Please enter i/p tweet :  
- ##### {goes on...}
+   ##### Below are Top 10 Trending Tweets  
+   ##### ============================ 
+   ##### #tweet  
+   ##### ============================  
+   ##### Please enter i/p tweet :  
+   ##### this is my second tweet #newtweet
+   ##### Below are Top 10 Trending Tweets  
+   ##### ============================ 
+   ##### #tweet  
+   ##### #newtweet
+   ##### ============================  
+   ##### Please enter i/p tweet :  
+   ##### {goes on...}
  
- Inorder to exit from the application, press [ctrl + c]
+   Inorder to exit from the application, press [ctrl + c]
  
        
  ### Improvements In future:        
