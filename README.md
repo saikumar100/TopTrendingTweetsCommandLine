@@ -34,6 +34,11 @@
        
  ### Improvements In future:        
  * Can expose this bussiness logic as REST API, GraphQL etc.,
+ * Can include specific time duration to fetch top 10 trending tweets inthat time interval.
+ 
+ 
+ ### Drawbacks:
+ * No persistent storage so at any point chances of getting OOME.
  
  
  
