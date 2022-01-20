@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+<script type="text/javascript">
+function myFunction() {
+// This method will trigger user permissions
+Html5Qrcode.getCameras().then(cameras => {
+  /**
+   * devices would be an array of objects of type:
+   * { id: "id", label: "label" }
+   */
+  if (cameras && cameras.length) {
+    var cameraId = cameras[0].id;
+    console.log("camerId is"+cameraId);
+
+  }
+}).catch(err => {
+  // handle err
+});
+}
+
+</script>
+</head>
+<body>
+<h2>Demo JavaScript in Head</h2>
+
+<div id="reader" style="width: 600px"></div>
+
+<button type="button" onclick="myFunction()">Request permissions</button>
+
+</body>
+</html> -->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+</head>
+<body>
+TEST
+<button type="button" onclick="listcamera()">List cameras</button>
+<div id="reader" style="width:600px;"></div>
+<script>
+function listcamera() {
+	Html5Qrcode.getCameras().then(cameras => {
+		if (cameras && cameras.length) {
+			cameraId = cameras[0].id;
+			scan(cameraId);
+		}
+		
+	}).catch(err => {
+			// handle err 
+				alert(err);
+	});
+}
+
+function scan(cameraId) {
+const html5Qr = new Html5Qrcode("reader");
+html5Qr.start(
+   cameraId, // retreived in the previous step.
+   {
+      fps: 10,    // sets the framerate to 10 frame per second 
+      qrbox: 250  // sets only 250 X 250 region of viewfinder to
+                  // scannable, rest shaded.
+ },
+ qrCodeMessage => {     // do something when code is read. For example:
+ 	alert(`qr code message: ${qrCodeMessage} `);
+     console.log(`QR Code detected: ${qrCodeMessage}`);
+ },
+ errorMessage => {     // parse error, ideally ignore it. For example:
+     console.log(`QR Code no longer in front of camera.`);
+ })
+ .catch(err => {     // Start failed, handle it. For example, 
+     console.log(`Unable to start scanning, error: ${err}`);
+ });
+}
+</script>
+</body>
+</html>
